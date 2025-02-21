@@ -2,6 +2,12 @@
   "name": "clangformattergxg",
   "displayName": "ClangFormatterGxg",
   "description": "a simple clang-formatter",
+  "author": "Gxg (https://github.com/GXGMAdhaTTer)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GXGMAdhaTTer/ClangFormatterGxg.git"
+  },
+  "icon": "images/icon.jpg",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.97.0"
@@ -10,7 +16,9 @@
     "Formatters"
   ],
   "activationEvents": [
-    "onCommand:ClangFormatterGxg.formatWithClangFormat"
+    "onCommand:ClangFormatterGxg.formatWithClangFormat",
+    "onLanguage:cpp",
+    "onLanguage:c"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -30,6 +38,7 @@
     ],
     "configuration": [
         {
+            "type": "object",
             "title": "ClangFormatterGxg Configuration",
             "properties": {
                 "clang-format.path": {
@@ -68,8 +77,8 @@
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/GXGMAdhaTTer/GruvBoxGxg.git"
-  }
+  "keywords": [
+    "C++"
+  ],
+  "license": "Apache"
 }
